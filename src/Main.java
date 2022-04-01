@@ -1,62 +1,25 @@
-import robotProgram.RobotPathFinder;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
+import stringFunctions.BurgerEncoder;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        //пока что так
-        //0 - свободно
-        //1 - препядствие
-        //старт и финиш - углы
-        //все поля пеервернутые) те старт находится в 00(слева сверху), финиш в конце(справа внизу)
-        int [][] testField1 = {
-                {0,0,0},
-                {0,1,1},
-                {0,0,0}
-        };//у данного поля 1
+        //про робота
+        //ExampleCases exampleCases = new ExampleCases();//все примеры засунул сюда
+        //RobotPathFinder r = new RobotPathFinder(exampleCases.examples.get(4));
 
-        int [][] testField2 = {
-                {0,0,0},
-                {0,1,0},
-                {0,0,0}
-        };//у данного поля 2
+        //System.out.println(r.findNumberEmptyField(3,3));//пустое поле
+        //System.out.println(r.findNumberWaysSimpleCase());//поиск по текущему полю
+        //r.PrintWays();
 
-        int [][] testField3 = {
-                {0,0,0},
-                {0,0,0},
-                {0,0,0}
-        };//у данного поля 6
+        //про кодировку
+        String source = "burger";
+        String encodedS = BurgerEncoder.burgerEncode(source);
+        String decodedS = BurgerEncoder.burgerDecode(encodedS);
+        System.out.println(source);
+        System.out.println(encodedS);
+        System.out.println(decodedS);
+        System.out.println(source.equals(decodedS));
 
-        int [][] testField0 = {
-                {0,0,0},
-                {0,1,1},
-                {0,0,1}
-        };//0
-
-
-        int [][] testField4 = {
-                {0,0,0,0},
-                {0,1,0,0},
-                {0,0,0,1},
-                {0,0,0,0}
-        };//4
-
-        int [][] testField5 = {
-                {0,0,0},
-                {0,1,0},
-                {0,0,0},
-                {0,0,0}
-        };//4
-
-        RobotPathFinder r = new RobotPathFinder(testField0);
-
-        //System.out.println(r.findNumberEmptyField(3,3));
-        System.out.println(r.findNumberWaysSimpleCase());
-        r.PrintWays();
-
-        LinkedList<String> a = new LinkedList<>();
     }
 }

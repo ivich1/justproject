@@ -1,4 +1,4 @@
-package functions;
+package stringFunctions;
 
 public class StringToNumberAdder {
 
