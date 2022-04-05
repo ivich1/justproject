@@ -1,4 +1,4 @@
-import stringFunctions.BurgerEncoder;
+import TraiderSequence.TraderSequenseAnalyzer;
 
 public class Main {
 
@@ -13,13 +13,22 @@ public class Main {
         //r.PrintWays();
 
         //про кодировку
-        String source = "burger";
-        String encodedS = BurgerEncoder.burgerEncode(source);
-        String decodedS = BurgerEncoder.burgerDecode(encodedS);
-        System.out.println(source);
-        System.out.println(encodedS);
-        System.out.println(decodedS);
-        System.out.println(source.equals(decodedS));
+        //String source = "burger";
+        //String encodedS = BurgerEncoder.burgerEncode(source);
+        //String decodedS = BurgerEncoder.burgerDecode(encodedS);
+        //System.out.println(source);
+        //System.out.println(encodedS);
+        //System.out.println(decodedS);
+        //System.out.println(source.equals(decodedS));
+
+        //про трейдера
+        int[] source1 = {5,-3,-3,5,5,-3,5,-3, -3, 10};//14 (начиная с 3 и до конца)
+        int[] source2 = {10,-6,5,-6,10};//13 (весь)
+        TraderSequenseAnalyzer t = new TraderSequenseAnalyzer(source2);
+        System.out.println("-------");
+
+        System.out.println(t.findMaxLinear(source1));
+
 
     }
 }
